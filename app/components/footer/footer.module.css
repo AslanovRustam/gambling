@@ -1,0 +1,117 @@
+.footer {
+  margin: 50px 7.8em 0;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--colors-common-zinc-700);
+}
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  gap: 80px;
+}
+.adress,
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.adress {
+  max-width: 230px;
+}
+.contact {
+  max-width: 200px;
+}
+.title {
+  color: var(--colors-common-white);
+  font-family: var(--font-involve);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+.description {
+  color: var(--colors-common-zinc-500);
+  font-family: var(--font-involve);
+  font-size: 16px;
+  line-height: 24px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.socials {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-bottom: 48px;
+  gap: 8px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  border: 2px solid var(--colors-base-default);
+}
+.rights {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+  border-top: 1px solid var(--colors-common-zinc-700);
+}
+.rightsLeft {
+  color: var(--colors-common-zinc-600);
+  font-size: 14px;
+  line-height: 20px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.pageLink {
+  color: var(--colors-common-zinc-500);
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+  &:hover,
+  &:focus {
+    color: var(--colors-common-red-500);
+  }
+}
+@media (max-width: 786px) {
+  .footer {
+    margin: 0 7.8em 0;
+    padding-top: 40px;
+  }
+  .rights {
+    gap: 12px;
+    flex-direction: column;
+  }
+  .list {
+    gap: 12px;
+  }
+  .rightsLeft {
+    order: 1;
+  }
+  .socials {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .footerLinks {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .links {
+    margin-right: auto;
+  }
+}

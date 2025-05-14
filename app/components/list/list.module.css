@@ -1,0 +1,37 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1080px;
+}
+.item {
+  width: 345px;
+  height: 220px;
+  background-color: var(--colors-common-zinc-900);
+  border-radius: 24px;
+  padding: 12px 20px;
+  background-image: url("../../../public/logo.png");
+  background-repeat: no-repeat;
+  background-position: -5px -51px;
+}
+.number {
+  font-family: var(--font-involve);
+  color: var(--colors-content-content1-foreground);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+.name {
+  color: var(--colors-content-content1-foreground);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+.text {
+  color: var(--colors-content-content2-foreground);
+  font-size: 16px;
+  line-height: 24px;
+}

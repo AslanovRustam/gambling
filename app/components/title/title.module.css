@@ -1,0 +1,16 @@
+.title {
+  color: var(--colors-common-white);
+  font-family: var(--font-involve);
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+}
+.accentColor {
+  color: var(--colors-common-red-500);
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 48px;
+  }
+}

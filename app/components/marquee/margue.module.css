@@ -1,0 +1,10 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+.mt-56 {
+  margin-top: 56px;
+}
+

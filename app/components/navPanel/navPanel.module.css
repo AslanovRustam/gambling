@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+.item {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--colors-common-zinc-500);
+  transition: var(--transition);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--colors-common-red-500);
+  }
+}
+@media (max-width: 768px) {
+  .list {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
