@@ -3,5 +3,5 @@ export function splitString(inputString: string): string[] {
 }
 
 export function splitStringByWord(inputString: string): string[] {
-  return inputString.split(/(\s+)/); 
+  return inputString.split(/(\s+)/);
 }
