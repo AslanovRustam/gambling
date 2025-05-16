@@ -1,11 +1,8 @@
-import s from "./footer.module.css";
-import Logo from "../../../public/icons/logo.svg";
 import NavPanel from "../navPanel/NavPanel";
-import Link from "next/link";
+import Logo from "../../../public/icons/logo.svg";
+import s from "./footer.module.css";
 
-type Props = {};
-
-function Footer({}: Props) {
+function Footer() {
   return (
     <footer className={s.footer}>
       <a href="https://clickable.agency/" target="_blank" rel="noreferrer">

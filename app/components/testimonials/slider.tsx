@@ -3,18 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import NavBtn from "./NavBtn";
 import avatar from "../../../public/avatar.png";
-import s from "./testimonials.module.css";
 import { TESTIMONIALS } from "@/app/utils/constants";
+import s from "./testimonials.module.css";
 
-type Props = {};
-
-function Slider({}: Props) {
+function Slider() {
   return (
     <Swiper
       spaceBetween={20}

@@ -5,9 +5,7 @@ import Star from "../../../public/icons/star.svg";
 import { NAVIGATION_MENU } from "@/app/utils/constants";
 import s from "./testimonials.module.css";
 
-type Props = {};
-
-function Testimonials({}: Props) {
+function Testimonials() {
   return (
     <div className={s.container} id={NAVIGATION_MENU[3].id}>
       <Title text="Testimonials" />

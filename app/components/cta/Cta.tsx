@@ -2,9 +2,7 @@ import ButtonCmp from "../button/Button";
 import Title from "../title/Title";
 import s from "./cta.module.css";
 
-type Props = {};
-
-function Cta({}: Props) {
+function Cta() {
   return (
     <section className={s.section}>
       <div className={s.title}>

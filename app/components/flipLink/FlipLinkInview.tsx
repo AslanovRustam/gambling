@@ -13,13 +13,13 @@ interface Props {
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-export const FlipLinkInview = ({ children, inview = "-20%" }: Props) => {
+export const FlipLinkInview = ({ children }: Props) => {
   const subTitle = splitStringByWord(children);
   const ref = useRef(null);
   const controls = useAnimation();
   const isInView = useInView(ref, {
     once: true,
-    margin: `0px 0px ${inview} 0px` as any,
+    margin: `0px 0px -20% 0px` as any,
   });
 
   useEffect(() => {

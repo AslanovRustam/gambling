@@ -1,14 +1,15 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
+
 import { Button } from "@heroui/button";
 import { useDisclosure } from "@heroui/modal";
+
 import Title from "../title/Title";
 import ModalCmp from "../modal/Modal";
 import { CASES, NAVIGATION_MENU } from "@/app/utils/constants";
+import { TiltCard } from "../tiltCard/TiltCard";
 import { ICase } from "@/types";
 import s from "./work.module.css";
-import { TiltCard } from "../tiltCard/TiltCard";
 
 function Work() {
   const [showAll, setShowAll] = useState(false);

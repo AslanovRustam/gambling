@@ -6,9 +6,7 @@ import s from "./header.module.css";
 import AnimatedHamburgerButton from "../burgerMenu/BurgerMenu";
 // import DropDownCmp from "../dropDown/DropDownCmp";
 
-type Props = {};
-
-export default function HeaderCmp({}: Props) {
+export default function HeaderCmp() {
   return (
     <header className={s.header}>
       <a href="https://clickable.agency/" target="_blank" rel="noreferrer">

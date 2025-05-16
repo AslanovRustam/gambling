@@ -5,9 +5,7 @@ import List from "../list/List";
 import { NAVIGATION_MENU, SERVICES } from "@/app/utils/constants";
 import s from "./services.module.css";
 
-type Props = {};
-
-function Services({}: Props) {
+function Services() {
   return (
     <div className={s.container} id={NAVIGATION_MENU[1].id}>
       <Title text="Our Services" />

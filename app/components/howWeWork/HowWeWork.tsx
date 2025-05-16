@@ -3,9 +3,7 @@ import Title from "../title/Title";
 import { WORKS } from "@/app/utils/constants";
 import s from "./howwework.module.css";
 
-type Props = {};
-
-function HowWeWork({}: Props) {
+function HowWeWork() {
   return (
     <section className={s.section} id="work">
       <Title text="How We Work" />

@@ -2,9 +2,7 @@
 import { Button } from "@heroui/button";
 import Arrow from "../../../public/icons/arrow.svg";
 
-type Props = {};
-
-function DropDownCmp({}: Props) {
+function DropDownCmp() {
   return (
     <div className="flex flex-wrap gap-4">
       <Button
