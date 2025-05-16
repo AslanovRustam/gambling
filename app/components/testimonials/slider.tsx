@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import NavBtn from "./NavBtn";
-import avatar from "../../../public/Avatar.png";
+import avatar from "../../../public/avatar.png";
 import s from "./testimonials.module.css";
 import { TESTIMONIALS } from "@/app/utils/constants";
 
