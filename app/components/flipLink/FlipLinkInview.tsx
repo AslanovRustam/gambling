@@ -19,7 +19,7 @@ export const FlipLinkInview = ({ children }: Props) => {
   const controls = useAnimation();
   const isInView = useInView(ref, {
     once: true,
-    margin: `0px 0px -20% 0px` as any,
+    margin: `0px 0px -20% 0px`,
   });
 
   useEffect(() => {
