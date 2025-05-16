@@ -1,0 +1,7 @@
+.name {
+  color: var(--colors-common-white);
+  font-family: var(--font-involve);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}

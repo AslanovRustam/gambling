@@ -12,10 +12,16 @@ export interface IItem {
   url?: string;
   image?: string | StaticImageData;
   code?: string;
+  company?: string;
 }
 export interface ICase {
   id: string;
   name: string;
   text?: string;
   images: string[] | StaticImageData[];
+}
+
+export interface INavMenu {
+  name: string;
+  id: string;
 }

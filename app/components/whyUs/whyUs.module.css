@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   padding: 100px 7.8em;
   display: flex;
   justify-content: space-between;
@@ -48,8 +49,6 @@
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  opacity: 0.5;
-  background: #3d3e41;
 }
 .number {
   color: var(--colors-common-zinc-50);
@@ -70,10 +69,51 @@
   padding: 12px 0;
 }
 .containerRight {
+  position: relative;
   max-width: 41vw;
   border-radius: 24px;
 }
-
+.parallaxInner {
+  position: relative;
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+}
+.heart,
+.diomond,
+.pike {
+  position: absolute;
+  width: 12rem;
+}
+.heart {
+  bottom: 1rem;
+  right: 4rem;
+  z-index: 1;
+}
+.diomond {
+  top: -6rem;
+  z-index: 1;
+  right: 28rem;
+}
+.pike {
+  bottom: -1rem;
+  right: 36rem;
+  z-index: 1;
+}
+@media (max-width: 1440px) {
+  .heart {
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .diomond {
+    top: -2rem;
+    right: 21rem;
+  }
+  .pike {
+    bottom: 0rem;
+    right: 25rem;
+  }
+}
 @media (max-width: 1024px) {
   .section {
     padding: 40px 7.8em;
@@ -88,6 +128,18 @@
     width: 100%;
     max-width: 100%;
   }
+  .heart {
+    bottom: 15%;
+    right: 1%;
+  }
+  .diomond {
+    top: -7%;
+    left: 21%;
+  }
+  .pike {
+    bottom: 0;
+    left: 4%;
+  }
 }
 @media (max-width: 640px) {
   .containerLeft {
@@ -101,5 +153,11 @@
     font-size: 16px;
     line-height: 28px;
     padding: 12px 0;
+  }
+  .heart,
+  .diomond,
+  .pike {
+    position: absolute;
+    width: 5rem;
   }
 }

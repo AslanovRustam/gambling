@@ -1,6 +1,6 @@
-import { WORKS } from "@/app/utils/constants";
 import ButtonCmp from "../button/Button";
 import Title from "../title/Title";
+import { WORKS } from "@/app/utils/constants";
 import s from "./howwework.module.css";
 
 type Props = {};

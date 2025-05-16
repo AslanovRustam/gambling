@@ -1,31 +1,17 @@
 import clsx from "clsx";
+import { NAVIGATION_MENU } from "@/app/utils/constants";
 import s from "./navPanel.module.css";
 
-type Props = {};
-
-function NavPanel({}: Props) {
+function NavPanel() {
   return (
     <nav className={clsx(s.list)}>
-      <li className={s.item}>
-        <a href="#company" className={s.link}>
-          Company
-        </a>
-      </li>
-      <li className={s.item}>
-        <a href="#services" className={s.link}>
-          Services
-        </a>
-      </li>
-      <li className={s.item}>
-        <a href="#work" className={s.link}>
-          Our Work
-        </a>
-      </li>
-      <li className={s.item}>
-        <a href="#reviews" className={s.link}>
-          Reviews
-        </a>
-      </li>
+      {NAVIGATION_MENU.map((item) => (
+        <li className={s.item} key={item.name}>
+          <a href={`#${item.id}`} className={s.link}>
+            {item.name}
+          </a>
+        </li>
+      ))}
     </nav>
   );
 }

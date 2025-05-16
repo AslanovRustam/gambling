@@ -1,14 +1,15 @@
-import s from "./testimonials.module.css";
+import Slider from "./slider";
+import Title from "../title/Title";
 import Clutch from "../../../public/icons/clutch.svg";
 import Star from "../../../public/icons/star.svg";
-import Title from "../title/Title";
-import Slider from "./slider";
+import { NAVIGATION_MENU } from "@/app/utils/constants";
+import s from "./testimonials.module.css";
 
 type Props = {};
 
 function Testimonials({}: Props) {
   return (
-    <div className={s.container} id="reviews">
+    <div className={s.container} id={NAVIGATION_MENU[3].id}>
       <Title text="Testimonials" />
       <p className={s.subTitle}>We stand for each our client anytime</p>
       <Clutch className={s.clutch} />

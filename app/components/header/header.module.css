@@ -1,8 +1,13 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 34px 0; */
   padding: 34px 7.8em;
   border-bottom: 1px solid var(--colors-common-zinc-700);
+}
+@media (max-width: 1023px) {
+  .header {
+    padding: 12px 7.8em;
+  }
 }

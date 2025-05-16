@@ -2,14 +2,14 @@ import React from "react";
 import Title from "../title/Title";
 import ButtonCmp from "../button/Button";
 import List from "../list/List";
-import { SERVICES } from "@/app/utils/constants";
+import { NAVIGATION_MENU, SERVICES } from "@/app/utils/constants";
 import s from "./services.module.css";
 
 type Props = {};
 
 function Services({}: Props) {
   return (
-    <div className={s.container} id="services">
+    <div className={s.container} id={NAVIGATION_MENU[1].id}>
       <Title text="Our Services" />
       <p className={s.subTitle}>What we do — all in one place</p>
       <div className="mb-10 w-full flex justify-center">

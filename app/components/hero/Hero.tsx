@@ -1,31 +1,25 @@
-import clsx from "clsx";
 import ButtonCmp from "../button/Button";
-import Title from "../title/Title";
+import { TitleByWord } from "../title/Title";
 import AnimatedText from "../animatedText/AnimatedText";
+import { NAVIGATION_MENU } from "@/app/utils/constants";
 import s from "./hero.module.css";
 
 export default function Hero() {
   return (
-    <section className={s.section}>
+    <section className={s.section} id={NAVIGATION_MENU[0].id}>
       <div className={s.container}>
-        <Title text="Design & Creative Powerhouse for the Gambling Industry" />
+        <TitleByWord text="Design & Creative Powerhouse for the Gambling Industry" />
 
         <AnimatedText
           text="Full-cycle production for marketing assets, UI/UX, games & brand identity — built by a team with 10+ years in iGaming."
           tag="p"
-          сlassName="text-white text-[20px] leading-7 opacity-40"
+          сlassName="text-white text-[20px] leading-7 opacity-40 sm:max-w-[380px] lg:max-w-[500px]"
         />
 
         <div className="w-fit">
           <ButtonCmp text="Let’s Talk" bgColor="red" />
         </div>
       </div>
-      <div
-        className={clsx(
-          s.imgWrapper,
-          "w-[400px] h-[270px] lg:w-[800px] lg:h-[540px] bg-[radial-gradient(at_bottom_left,_rgba(255,25,35,0.15)_0%,_rgba(74,74,74,0.15)_50%,_rgba(72,24,120,0.15)_100%)]"
-        )}
-      ></div>
     </section>
   );
 }

@@ -30,23 +30,23 @@ function Footer({}: Props) {
         </div>
         <div className={s.links}>
           <NavPanel />
-          <ul className={s.socials}>
+          {/* <ul className={s.socials}>
             <li className={s.item}></li>
             <li className={s.item}></li>
             <li className={s.item}></li>
             <li className={s.item}></li>
             <li className={s.item}></li>
             <li className={s.item}></li>
-          </ul>
+          </ul> */}
         </div>
       </div>
       <div className={s.rights}>
         <p className={s.rightsLeft}>© 2025 Clickable All right reserved.</p>
-        <ul className={s.list}>
+        {/* <ul className={s.list}>
           <li className={s.pageLink}>Privacy policy</li>
           <li className={s.pageLink}>Terms of service</li>
           <li className={s.pageLink}>Cookies settings</li>
-        </ul>
+        </ul> */}
       </div>
     </footer>
   );

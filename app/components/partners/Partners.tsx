@@ -1,12 +1,9 @@
 "use client";
-import { Button } from "@heroui/button";
 import Title from "../title/Title";
 import s from "./partners.module.css";
 import MarqueeCmp from "../marquee/marquee";
 
-type Props = {};
-
-function Partners({}: Props) {
+function Partners() {
   return (
     <section className={s.section} id="partners">
       <div className="max-w-[530px] text-center">
@@ -21,12 +18,12 @@ function Partners({}: Props) {
       <MarqueeCmp speed={40} key={1} className="mt-56" />
       <MarqueeCmp direction="right" speed={70} key={2} />
 
-      <Button
+      {/* <Button
         className="rounded-[999px] px-6 py-3 text-[var(--colors-common-red-500)] border-[var(--colors-common-red-500)] mt-10 mb-14"
         variant="bordered"
       >
         Show More
-      </Button>
+      </Button> */}
     </section>
   );
 }
