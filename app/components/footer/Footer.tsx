@@ -8,7 +8,7 @@ type Props = {};
 function Footer({}: Props) {
   return (
     <footer className={s.footer}>
-      <a href="https://clickable.agency/" target="_blank">
+      <a href="https://clickable.agency/" target="_blank" rel="noreferrer">
         <Logo className="w-32 sm:w-48" />
       </a>
       <div className={s.footerLinks}>

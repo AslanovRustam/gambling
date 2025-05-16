@@ -11,7 +11,7 @@ type Props = {};
 export default function HeaderCmp({}: Props) {
   return (
     <header className={s.header}>
-      <a href="https://clickable.agency/" target="_blank">
+      <a href="https://clickable.agency/" target="_blank" rel="noreferrer">
         <Logo className="w-32 sm:w-48" />
       </a>
       <div className="hidden lg:flex">

@@ -55,6 +55,11 @@ export const TiltCard = ({ item, setCase }: Props) => {
   return (
     <li
       ref={ref}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") setCase(item.id);
+      }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={s.item}

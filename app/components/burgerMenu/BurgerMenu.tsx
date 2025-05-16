@@ -153,7 +153,11 @@ export default function AnimatedHamburgerButton() {
           {(onClose) => (
             <>
               <ModalHeader className="flex gap-1 justify-between items-center py-3 px-0">
-                <a href="https://clickable.agency/" target="_blank">
+                <a
+                  href="https://clickable.agency/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Logo className="w-32 sm:w-48" />
                 </a>
                 <HamburgerButton onClick={onClose} isOpen={isOpen} />

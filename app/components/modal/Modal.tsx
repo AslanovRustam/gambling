@@ -58,8 +58,11 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
                 slidesPerView="auto"
                 key={1}
               >
-                {currentCase?.images.map((image) => (
-                  <SwiperSlide className="rounded-sm overflow-hidden w-80">
+                {currentCase?.images.map((image, i) => (
+                  <SwiperSlide
+                    className="rounded-sm overflow-hidden w-80"
+                    key={i}
+                  >
                     <Image
                       src={image}
                       alt="case presentaion"

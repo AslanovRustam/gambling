@@ -6,12 +6,20 @@ function NavBtn() {
   const swiper = useSwiper();
   return (
     <div className={s.swiperBtns}>
-      <div className={s.btnPrev} onClick={() => swiper.slidePrev()}>
+      <button
+        type="button"
+        className={s.btnPrev}
+        onClick={() => swiper.slidePrev()}
+      >
         <Arrow className={s.arrow} />
-      </div>
-      <div className={s.btnNext} onClick={() => swiper.slideNext()}>
+      </button>
+      <button
+        type="button"
+        className={s.btnNext}
+        onClick={() => swiper.slideNext()}
+      >
         <Arrow className={s.arrow} />
-      </div>
+      </button>
     </div>
   );
 }
