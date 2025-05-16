@@ -1,5 +1,7 @@
-import { ICase, IItem, INavMenu } from "@/types";
 import { lazy } from "react";
+
+import { ICase, IItem, INavMenu } from "@/types";
+
 import okFun1 from "../../public/cases/okfun/1.png";
 import okFun2 from "../../public/cases/okfun/2.png";
 import okFun3 from "../../public/cases/okfun/3.png";
