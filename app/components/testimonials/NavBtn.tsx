@@ -1,4 +1,5 @@
 import { useSwiper } from "swiper/react";
+// Local
 import Arrow from "../../../public/icons/arrowCustom.svg";
 import s from "./testimonials.module.css";
 

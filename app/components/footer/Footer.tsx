@@ -1,4 +1,5 @@
 import NavPanel from "../navPanel/NavPanel";
+// Local
 import Logo from "../../../public/icons/logo.svg";
 import s from "./footer.module.css";
 

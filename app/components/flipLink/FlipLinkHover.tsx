@@ -1,7 +1,8 @@
 "use client";
-import { splitString } from "@/app/utils/splitString";
 import clsx from "clsx";
 import { motion } from "motion/react";
+// Utils
+import { splitString } from "@/app/utils/splitString";
 
 interface Props {
   children: string;

@@ -1,7 +1,10 @@
 import ButtonCmp from "../button/Button";
 import { TitleByWord } from "../title/Title";
+// Animations
 import AnimatedText from "../animatedText/AnimatedText";
+// Utils
 import { NAVIGATION_MENU } from "@/app/utils/constants";
+// Local
 import s from "./hero.module.css";
 
 export default function Hero() {

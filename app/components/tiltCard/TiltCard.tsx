@@ -7,8 +7,10 @@ import {
   useSpring,
 } from "framer-motion";
 import Image from "next/image";
-import s from "./tiltcard.module.css";
+// Utils
 import { ICase } from "@/types";
+// Local
+import s from "./tiltcard.module.css";
 
 const ROTATION_RANGE = 10;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;

@@ -1,8 +1,9 @@
 "use client";
-import { splitStringByWord } from "@/app/utils/splitString";
-import clsx from "clsx";
-import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
+import clsx from "clsx";
+// Utils
+import { splitStringByWord } from "@/app/utils/splitString";
 
 interface Props {
   children: string;

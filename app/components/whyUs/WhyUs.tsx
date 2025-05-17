@@ -2,7 +2,11 @@
 import { MouseEvent, useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
+// Components
 import Title from "../title/Title";
+// Animations
+import { MaskText } from "../maskText/MaskText";
+// Local
 import logo from "../../../public/3DClickablelogo.png";
 import icon1 from "../../../public/Icon 01.png";
 import icon2 from "../../../public/Icon 02.png";
@@ -96,16 +100,121 @@ function WhyUs() {
             <div className={s.square}>
               <Image src={icon1} alt="01" />
             </div>
-            <p className={s.number}>01</p>
+            <div className={s.number}>
+              <MaskText text="01" stagger={1} />
+            </div>
           </div>
           <div className={s.right}>
-            <p className={s.name}>10+ years in iGaming</p>
-            <p className={s.description}>
-              We know the challenges. We speak your language.
-            </p>
+            <div className={s.name}>
+              <MaskText text="10+ years in iGaming" stagger={2} />
+            </div>
+            <div className={s.description}>
+              <MaskText
+                text="We know the challenges. We speak your language."
+                stagger={3}
+              />
+            </div>
           </div>
         </div>
         <div className={s.wrapper}>
+          <div className={s.left}>
+            <div className={s.square}>
+              <Image src={icon2} alt="02" />
+            </div>
+            <div className={s.number}>
+              <MaskText text="02" stagger={1} />
+            </div>
+          </div>
+          <div className={s.right}>
+            <div className={s.name}>
+              <MaskText text="Scalable teams" stagger={2} />
+            </div>
+            <div className={s.description}>
+              <MaskText
+                text="Trained specifically for your project."
+                stagger={3}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={s.wrapper}>
+          <div className={s.left}>
+            <div className={s.square}>
+              <Image src={icon3} alt="03" />
+            </div>
+            <div className={s.number}>
+              <MaskText text="03" stagger={1} />
+            </div>
+          </div>
+          <div className={s.right}>
+            <div className={s.name}>
+              <MaskText text="You can rely on us" stagger={2} />
+            </div>
+            <div className={s.description}>
+              <MaskText
+                text="We handle the boring stuff — from voiceover orders to licensing
+              stock content."
+                stagger={3}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={s.wrapper}>
+          <div className={s.left}>
+            <div className={s.square}>
+              <Image src={icon4} alt="04" />
+            </div>
+            <div className={s.number}>
+              <MaskText text="04" stagger={1} />
+            </div>
+          </div>
+          <div className={s.right}>
+            <div className={s.name}>
+              <MaskText text="Our clients" stagger={2} />
+            </div>
+            <div className={s.description}>
+              <MaskText
+                text="They stick with us. And we help them grow & win"
+                stagger={3}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className={clsx(
+          s.containerRight,
+          "w-[400px] h-[270px] sm:h-auto lg:w-[800px]  lg:h-[540px] flex items-center justify-center"
+        )}
+      >
+        <div className={s.parallaxInner}>
+          <Image
+            src={logo}
+            alt="Clickable logo"
+            className="h-full w-auto z-10 relative"
+          />
+        </div>
+        <Image
+          src={heart}
+          alt="card heart"
+          className={s.heart}
+          ref={heartRef}
+        />
+        <Image
+          src={diomond}
+          alt="card diomond"
+          className={s.diomond}
+          ref={diomondRef}
+        />
+        <Image src={pike} alt="card pike" className={s.pike} ref={pikeRef} />
+      </div>
+    </section>
+  );
+}
+
+export default WhyUs;
+
+/* <div className={s.wrapper}>
           <div className={s.left}>
             <div className={s.square}>
               <Image src={icon2} alt="02" />
@@ -147,37 +256,4 @@ function WhyUs() {
               They stick with us. And we help them grow & win
             </p>
           </div>
-        </div>
-      </div>
-      <div
-        className={clsx(
-          s.containerRight,
-          "w-[400px] h-[270px] sm:h-auto lg:w-[800px]  lg:h-[540px] flex items-center justify-center"
-        )}
-      >
-        <div className={s.parallaxInner}>
-          <Image
-            src={logo}
-            alt="Clickable logo"
-            className="h-full w-auto z-10 relative"
-          />
-        </div>
-        <Image
-          src={heart}
-          alt="card heart"
-          className={s.heart}
-          ref={heartRef}
-        />
-        <Image
-          src={diomond}
-          alt="card diomond"
-          className={s.diomond}
-          ref={diomondRef}
-        />
-        <Image src={pike} alt="card pike" className={s.pike} ref={pikeRef} />
-      </div>
-    </section>
-  );
-}
-
-export default WhyUs;
+        </div> */

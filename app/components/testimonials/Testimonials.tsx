@@ -1,8 +1,10 @@
 import Slider from "./slider";
 import Title from "../title/Title";
+// Utils
+import { NAVIGATION_MENU } from "@/app/utils/constants";
+// Local
 import Clutch from "../../../public/icons/clutch.svg";
 import Star from "../../../public/icons/star.svg";
-import { NAVIGATION_MENU } from "@/app/utils/constants";
 import s from "./testimonials.module.css";
 
 function Testimonials() {

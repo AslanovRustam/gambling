@@ -1,7 +1,8 @@
 "use client";
 import Title from "../title/Title";
-import s from "./partners.module.css";
 import MarqueeCmp from "../marquee/marquee";
+// Local
+import s from "./partners.module.css";
 
 function Partners() {
   return (

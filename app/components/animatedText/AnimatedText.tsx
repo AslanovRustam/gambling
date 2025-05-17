@@ -1,5 +1,6 @@
 "use client";
 import { motion, Variants } from "motion/react";
+// Utils
 import { splitString } from "../../utils/splitString";
 
 type Props = {

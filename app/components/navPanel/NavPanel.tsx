@@ -1,5 +1,7 @@
 import clsx from "clsx";
+// Utils
 import { NAVIGATION_MENU } from "@/app/utils/constants";
+// Local
 import s from "./navPanel.module.css";
 
 function NavPanel() {

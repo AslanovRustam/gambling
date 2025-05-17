@@ -1,5 +1,6 @@
 import { Suspense, useMemo } from "react";
 import clsx from "clsx";
+// Utils
 import { ICONS } from "@/app/utils/constants";
 
 type Props = {

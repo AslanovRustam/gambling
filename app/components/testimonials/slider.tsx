@@ -3,14 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
+// Components
+import NavBtn from "./NavBtn";
+// Utils
+import { TESTIMONIALS } from "@/app/utils/constants";
+// Local
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import NavBtn from "./NavBtn";
 import avatar from "../../../public/avatar.png";
-import { TESTIMONIALS } from "@/app/utils/constants";
 import s from "./testimonials.module.css";
 
 function Slider() {

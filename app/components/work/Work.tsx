@@ -1,14 +1,17 @@
 "use client";
 import { useState } from "react";
-
 import { Button } from "@heroui/button";
 import { useDisclosure } from "@heroui/modal";
-
+// Animations
+import Magnetic from "../magnetic/Magnetic";
+import { TiltCard } from "../tiltCard/TiltCard";
+// Components
 import Title from "../title/Title";
 import ModalCmp from "../modal/Modal";
+// Utils
 import { CASES, NAVIGATION_MENU } from "@/app/utils/constants";
-import { TiltCard } from "../tiltCard/TiltCard";
 import { ICase } from "@/types";
+// Local
 import s from "./work.module.css";
 
 function Work() {
@@ -48,13 +51,15 @@ function Work() {
           ))}
         </ul>
       </div>
-      <Button
-        className="rounded-[999px] px-6 py-3 text-[var(--colors-common-red-500)] border-[var(--colors-common-red-500)] mt-10 mb-14"
-        variant="bordered"
-        onPress={toggleShowAll}
-      >
-        {showAll ? "Show less" : "Show more"}
-      </Button>
+      <Magnetic>
+        <Button
+          className="rounded-[999px] px-6 py-3 text-[var(--colors-common-red-500)] border-[var(--colors-common-red-500)] mt-10 mb-14"
+          variant="bordered"
+          onPress={toggleShowAll}
+        >
+          {showAll ? "Show less" : "Show more"}
+        </Button>
+      </Magnetic>
       <ModalCmp
         isOpen={isOpen}
         onOpenChange={onOpenChange}

@@ -7,11 +7,15 @@ import {
   ModalFooter,
   Button,
 } from "@heroui/react";
+import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+// Components
 import ButtonCmp from "../button/Button";
-import Arrow from "../../../public/icons/arrow-left.svg";
+// Utils
 import { ICase } from "@/types";
+// Local
+import Arrow from "../../../public/icons/arrow-left.svg";
 import "swiper/css";
 import "swiper/css/pagination";
 import s from "./modal.module.css";
@@ -31,20 +35,20 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
       hideCloseButton
       placement="center"
     >
-      <ModalContent>
+      <ModalContent className="mt-8">
         {(onClose) => (
           <>
-            <ModalHeader className="flex flex-col gap-1 py-3 px-3">
+            <ModalHeader className={s.modalHeader}>
               <Button
                 startContent={<Arrow />}
-                className="mb-4 w-20 pr-3 pl-[6px]"
+                className="mb-2 w-20 pr-3 pl-[6px]"
                 onPress={onClose}
               >
                 Back
               </Button>
               <p className={s.name}>{currentCase?.name}</p>
             </ModalHeader>
-            <ModalBody>
+            <ModalBody className={s.modalBody}>
               <Swiper
                 // pagination={true}
                 keyboard={{
@@ -60,25 +64,29 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
               >
                 {currentCase?.images.map((image, i) => (
                   <SwiperSlide
-                    className="rounded-sm overflow-hidden w-80"
                     key={i}
+                    className="rounded-sm overflow-hidden w-80 mx-auto flex justify-center"
                   >
+                    {/* <div className={s.imageSlider}> */}
                     <Image
                       src={image}
                       alt="case presentaion"
-                      className="w-full rounded-2xl overflow-hidden"
+                      className={clsx(s.image)}
                     />
+                    {/* </div> */}
                     <div className="py-5"></div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className={s.modalFooter}>
+              <p className={clsx(s.text)}>{currentCase?.text}</p>
               <ButtonCmp
                 text="Order"
                 bgColor="red"
                 onClick={onClose}
                 styles="w-full"
+                noAnimate
               />
             </ModalFooter>
           </>

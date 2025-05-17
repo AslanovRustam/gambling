@@ -1,8 +1,11 @@
 import React from "react";
+// Componetns
 import Title from "../title/Title";
 import ButtonCmp from "../button/Button";
 import List from "../list/List";
+// Utils
 import { NAVIGATION_MENU, SERVICES } from "@/app/utils/constants";
+// Local
 import s from "./services.module.css";
 
 function Services() {

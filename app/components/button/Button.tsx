@@ -1,10 +1,13 @@
 import { Button } from "@heroui/button";
 import clsx from "clsx";
 import React from "react";
+// Animations
+import Magnetic from "../magnetic/Magnetic";
 
 type Props = {
   text: string;
   bgColor?: string;
+  noAnimate?: boolean;
   variant?:
     | "solid"
     | "bordered"
@@ -25,22 +28,51 @@ type Props = {
     | "danger";
 };
 
-function ButtonCmp({ text, variant, bgColor, onClick, styles, color }: Props) {
+function ButtonCmp({
+  text,
+  variant,
+  bgColor,
+  onClick,
+  styles,
+  color,
+  noAnimate,
+}: Props) {
   return (
-    <Button
-      className={clsx(
-        bgColor === "red" ? "bg-[var(--colors-common-red-500)]" : "",
-        "rounded-[999px] px-6 py-3 ",
-        styles && styles
+    <>
+      {noAnimate ? (
+        <Button
+          className={clsx(
+            bgColor === "red" ? "bg-[var(--colors-common-red-500)]" : "",
+            "rounded-[999px] px-6 py-3 ",
+            styles && styles
+          )}
+          variant={variant}
+          onPress={onClick}
+          color={color}
+          id="al"
+          aria-label={text}
+        >
+          {text}
+        </Button>
+      ) : (
+        <Magnetic>
+          <Button
+            className={clsx(
+              bgColor === "red" ? "bg-[var(--colors-common-red-500)]" : "",
+              "rounded-[999px] px-6 py-3 ",
+              styles && styles
+            )}
+            variant={variant}
+            onPress={onClick}
+            color={color}
+            id="al"
+            aria-label={text}
+          >
+            {text}
+          </Button>
+        </Magnetic>
       )}
-      variant={variant}
-      onPress={onClick}
-      color={color}
-      id="al"
-      aria-label={text}
-    >
-      {text}
-    </Button>
+    </>
   );
 }
 

@@ -1,10 +1,13 @@
 "use client";
 import clsx from "clsx";
-import s from "./title.module.css";
 import { motion } from "framer-motion";
+// Animations
+import { FlipLinkInview } from "../flipLink/FlipLinkInview";
+// Utils
 import { textRevealMotion } from "@/app/utils/animations";
 import { splitStringByWord } from "@/app/utils/splitString";
-import { FlipLinkInview } from "../flipLink/FlipLinkInview";
+// Local
+import s from "./title.module.css";
 
 type Props = { text: string; accentColor?: boolean; noAnimate?: boolean };
 type PropsTitleByWord = { text: string; accentColor?: boolean };

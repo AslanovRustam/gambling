@@ -9,11 +9,15 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@heroui/react";
+// Animations
+import { FlipLinkHover } from "../flipLink/FlipLinkHover";
+// Components
 import ButtonCmp from "../button/Button";
+// Utils
 import { NAVIGATION_MENU } from "@/app/utils/constants";
+// Local
 import Logo from "../../../public/icons/logo.svg";
 import s from "./burgermenu.module.css";
-import { FlipLinkHover } from "../flipLink/FlipLinkHover";
 
 interface Props {
   onClick: () => void;
@@ -32,7 +36,7 @@ export const HamburgerButton = ({ onClick, isOpen }: Props) => {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         onClick={onClick}
-        className="relative h-20 w-20 rounded-full bg-white/0 transition-colors hover:bg-[#ff1923]"
+        className="relative h-20 w-20 rounded-full bg-white/0 transition-colors hover:bg-[#ff1923]  right-[-2em]"
       >
         <motion.span
           variants={VARIANTS.top}
@@ -176,7 +180,7 @@ export default function AnimatedHamburgerButton() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex gap-1 justify-between items-center py-3 px-0">
+              <ModalHeader className="flex gap-1 justify-between items-center py-3 px-0 ">
                 <a
                   href="https://clickable.agency/"
                   target="_blank"

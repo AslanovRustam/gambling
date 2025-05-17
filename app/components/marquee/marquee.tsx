@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+// Local
 import CustomIcon from "../customIcon/CustomIcon";
 import s from "./margue.module.css";
 

@@ -1,6 +1,10 @@
 import ButtonCmp from "../button/Button";
 import Title from "../title/Title";
+// Animations
+import { MaskText } from "../maskText/MaskText";
+// Utils
 import { WORKS } from "@/app/utils/constants";
+// Local
 import s from "./howwework.module.css";
 
 function HowWeWork() {
@@ -10,11 +14,17 @@ function HowWeWork() {
       <p className={s.subTitle}>Smart. Structured. Scalable</p>{" "}
       <div className="mb-10">
         <ul className={s.list}>
-          {WORKS.map(({ id, name, text }) => (
+          {WORKS.map(({ id, name, text }, i) => (
             <li key={id} className={s.item}>
-              <p className={s.number}>{id}</p>
-              <p className={s.name}>{name}</p>
-              <p className={s.text}>{text}</p>
+              <div className={s.number}>
+                <MaskText text={id} stagger={i} />
+              </div>
+              <div className={s.name}>
+                <MaskText text={name} stagger={i} />
+              </div>
+              <div className={s.text}>
+                <MaskText text={text} stagger={i} />
+              </div>
             </li>
           ))}
         </ul>

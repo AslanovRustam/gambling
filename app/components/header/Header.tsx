@@ -1,10 +1,12 @@
 import React from "react";
+// Components
 import ButtonCmp from "../button/Button";
 import NavPanel from "../navPanel/NavPanel";
-import Logo from "../../../public/icons/logo.svg";
-import s from "./header.module.css";
 import AnimatedHamburgerButton from "../burgerMenu/BurgerMenu";
 // import DropDownCmp from "../dropDown/DropDownCmp";
+// Local
+import Logo from "../../../public/icons/logo.svg";
+import s from "./header.module.css";
 
 export default function HeaderCmp() {
   return (
@@ -15,7 +17,7 @@ export default function HeaderCmp() {
       <div className="hidden lg:flex">
         <NavPanel />
       </div>
-      <div className="flex lg:hidden">
+      <div className="flex  lg:hidden">
         <AnimatedHamburgerButton />
       </div>
       <div className="hidden lg:flex align-middle gap-2">
