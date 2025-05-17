@@ -22,12 +22,12 @@
   top: 2px;
 }
 .sliderItem {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   padding: 12px;
   min-height: 208px;
-  min-width: 300px;
-  width: 520px;
+  min-width: 300px !important;
+  width: 520px !important;
   border-radius: 16px;
   border: 1px solid var(--colors-base-default-100);
   background: var(--colors-content-content1);
@@ -142,6 +142,6 @@
 }
 @media (max-width: 640px) {
   .sliderItem {
-    width: 312px;
+    width: 312px !important;
   }
 }
