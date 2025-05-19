@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import Script from "next/script";
 
 import { Providers } from "./providers";
 
@@ -34,7 +35,13 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en">
-      <head />
+      <head>
+        <Script
+          id="hubspot-script"
+          strategy="afterInteractive"
+          src="https://js-eu1.hs-scripts.com/26544394.js"
+        />
+      </head>
       <body
         className={clsx(
           "min-h-screen  font-roboto antialiased",
