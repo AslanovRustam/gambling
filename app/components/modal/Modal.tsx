@@ -83,6 +83,7 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
                         src={image}
                         alt="case presentaion"
                         className={clsx(s.image)}
+                        quality={100}
                       />
 
                       <div className="pt-8"></div>

@@ -55,7 +55,7 @@ function MarqueeCmp({ direction = "left", speed = 50, className }: Props) {
       <ul className={s.list}>
         {icons.map((icon) => (
           <li className={s.item} key={icon}>
-            <CustomIcon name={icon} />
+            <CustomIcon name={icon} className="" />
           </li>
         ))}
       </ul>

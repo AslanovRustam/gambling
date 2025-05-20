@@ -85,6 +85,7 @@ export const TiltCard = ({ item, setCase }: Props) => {
             className={s.image}
             width={319}
             height={370}
+            quality={100}
           />
         </div>
       </motion.div>
