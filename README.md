@@ -1,53 +1,42 @@
-# Next.js & HeroUI Template
+# Gambling Creative Website
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+A high-converting landing page for a creative agency operating in the gambling industry. Built with performance, visual appeal, and user interaction in mind.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+**Demo**: [Open demo][live-demo]
+
+![Website screenshot](public/readme.png "png")
 
 ## Technologies Used
 
 - [Next.js 14](https://nextjs.org/docs/getting-started)
 - [HeroUI v2](https://heroui.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
 
-## How to Use
+The "Let’s Talk" or "Book a Call" buttons open a modal with a form. On submit, it sends a POST request to next.js route and uses Nodemailer to email submissions.
 
-### Use the template with create-next-app
+### Features
 
-To create a new project based on this template using `create-next-app`, run the following command:
+- Responsive landing page layout
+- Scroll-based animations
+- Reusable modal & form components
+- Email sending via Nodemailer (API Route)
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
+### Getting Started
 
-### Install dependencies
+1. **Clone the repository:**
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+   ```bash
+   git clone https://github.com/AslanovRustam/gambling.git
 
-```bash
-npm install
-```
+   cd gambling
 
-### Run the development server
+   npm i
 
-```bash
-npm run dev
-```
+   npm run dev
+   ```
 
-### Setup pnpm (optional)
+   Open http://localhost:3000 in your browser to see the result.
 
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+   [live-demo]: https://gambling-six.vercel.app/
