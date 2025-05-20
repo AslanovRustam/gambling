@@ -39,7 +39,13 @@ export default function RootLayout({
         <Script
           id="hubspot-script"
           strategy="afterInteractive"
-          src="https://js-eu1.hs-scripts.com/26544394.js"
+          src="https://js-eu1.hs-scripts.com/26544394.js?integration=WordPress"
+        />
+        <link
+          rel="icon"
+          href="/icon.png?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
         />
       </head>
       <body

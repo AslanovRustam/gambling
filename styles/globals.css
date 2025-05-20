@@ -34,6 +34,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   line-height: 1.5;
@@ -43,6 +44,7 @@ body {
   background-color: var(--colors-common-black);
   /* padding: 0 7.8em; */
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
   background: var(--colors-common-red-500) !important;

@@ -6,6 +6,7 @@ import { MaskText } from "../maskText/MaskText";
 import { WORKS } from "@/app/utils/constants";
 // Local
 import s from "./howwework.module.css";
+import Form from "../form/Form";
 
 function HowWeWork() {
   return (
@@ -29,7 +30,8 @@ function HowWeWork() {
           ))}
         </ul>
       </div>
-      <ButtonCmp text="Let's Talk" bgColor="red" />
+      <Form variant="howWeWork" />
+      {/* <ButtonCmp text="Let's Talk" bgColor="red" /> */}
     </section>
   );
 }

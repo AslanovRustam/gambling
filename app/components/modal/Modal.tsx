@@ -1,17 +1,12 @@
+"use client";
 import Image from "next/image";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-} from "@heroui/react";
+import { useEffect, useState } from "react";
+import { Modal, ModalContent, ModalHeader, Button } from "@heroui/react";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 // Components
-import ButtonCmp from "../button/Button";
+import Form from "../form/Form";
 // Utils
 import { ICase } from "@/types";
 // Local
@@ -27,6 +22,19 @@ type Props = {
 };
 
 function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
+  const [modalSize, setModalSize] = useState<"sm" | "3xl">("3xl");
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setModalSize(window.innerWidth < 1024 ? "sm" : "3xl");
+    };
+
+    checkScreenSize();
+
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
   return (
     <Modal
       isOpen={isOpen}
@@ -34,6 +42,8 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
       backdrop="blur"
       hideCloseButton
       placement="center"
+      size={modalSize}
+      className="px-2 sm:px-0"
     >
       <ModalContent className="mt-8">
         {(onClose) => (
@@ -41,54 +51,50 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
             <ModalHeader className={s.modalHeader}>
               <Button
                 startContent={<Arrow />}
-                className="mb-2 w-20 pr-3 pl-[6px]"
+                className="mb-2 w-20 pr-3 pl-[6px] "
                 onPress={onClose}
               >
                 Back
               </Button>
               <p className={s.name}>{currentCase?.name}</p>
             </ModalHeader>
-            <ModalBody className={s.modalBody}>
-              <Swiper
-                // pagination={true}
-                keyboard={{
-                  enabled: true,
-                }}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[Pagination, Navigation]}
-                spaceBetween={12}
-                slidesPerView="auto"
-                key={1}
-              >
-                {currentCase?.images.map((image, i) => (
-                  <SwiperSlide
-                    key={i}
-                    className="rounded-sm overflow-hidden w-80 mx-auto flex justify-center"
-                  >
-                    {/* <div className={s.imageSlider}> */}
-                    <Image
-                      src={image}
-                      alt="case presentaion"
-                      className={clsx(s.image)}
-                    />
-                    {/* </div> */}
-                    <div className="py-5"></div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </ModalBody>
-            <ModalFooter className={s.modalFooter}>
-              <p className={clsx(s.text)}>{currentCase?.text}</p>
-              <ButtonCmp
-                text="Order"
-                bgColor="red"
-                onClick={onClose}
-                styles="w-full"
-                noAnimate
-              />
-            </ModalFooter>
+            <div className={s.content}>
+              <div className={s.modalBody}>
+                <Swiper
+                  // pagination={true}
+                  keyboard={{
+                    enabled: true,
+                  }}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Pagination, Navigation]}
+                  spaceBetween={12}
+                  slidesPerView={1}
+                  key={1}
+                  className="rounded-sm overflow-hidden w-80 mx-auto flex justify-center"
+                >
+                  {currentCase?.images.map((image, i) => (
+                    <SwiperSlide
+                      key={i}
+                      className="rounded-sm overflow-hidden  mx-auto flex justify-center"
+                    >
+                      <Image
+                        src={image}
+                        alt="case presentaion"
+                        className={clsx(s.image)}
+                      />
+
+                      <div className="pt-8"></div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+              <div className={s.modalFooter}>
+                <p className={clsx(s.text)}>{currentCase?.text}</p>
+                <Form variant="work" parrentClose={onClose} />
+              </div>
+            </div>
           </>
         )}
       </ModalContent>

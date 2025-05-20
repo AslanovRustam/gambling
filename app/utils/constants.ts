@@ -176,22 +176,22 @@ export const CASES: ICase[] = [
       okFun13,
     ],
   },
-  {
-    id: "2",
-    name: "Bobr Casino",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
-    images: [bobr1, bobr2, bobr3],
-  },
+  // {
+  //   id: "2",
+  //   name: "Bobr Casino",
+  //   text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+  //   images: [bobr1, bobr2, bobr3],
+  // },
   {
     id: "3",
-    name: "Cashimo",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "Cashimo – Full-Scale Branding, Characters & Digital Production",
+    text: "For Cashimo, we delivered a full creative production—from brand concept to digital ecosystem. We created 30+ unique characters, designed smooth UI/UX, developed a dynamic landing page, 100+ promo banners, and merchandise. Custom icons and interactive elements built a rich, consistent visual world.",
     images: [cashimo1, cashimo2, cashimo3, cashimo4, cashimo5, cashimo6],
   },
   {
     id: "4",
-    name: "Casino Elite",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "Casino Elite – Website, Mascots & Marketing Materials",
+    text: "For Casino Elite, we crafted a premium digital experience with a sophisticated website and supporting graphics. AI-generated elegant mascots, high-impact banners, email templates, and an interactive advent calendar boosted engagement. Outdoor and digital ads ensured a consistent, luxurious brand presence.",
     images: [
       casinoElite1,
       casinoElite2,
@@ -203,14 +203,14 @@ export const CASES: ICase[] = [
   },
   {
     id: "5",
-    name: "Fruits Slot",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "Slot Fruits – Slot Game, Graphics & Animatio",
+    text: "For Slot Fruits, we created a fully immersive slot game from concept to final production. Our team designed custom graphics, symbols, backgrounds, and smooth, engaging animations for spins, bonuses, and special effects. We integrated all assets into the client’s UI framework, delivering a vibrant game blending creativity and seamless functionality.",
     images: [fruits1, fruits2, fruits3, fruits4, fruits5],
   },
   {
     id: "6",
-    name: "Mines Slot",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "Slot Wild Gold Mine – Slot Game Concept, Graphics & Animation",
+    text: "We crafted a complete Wild West gold rush slot game with AI-generated visuals. Our team created detailed symbols, characters, and backgrounds, plus dynamic animations for reels, bonuses, and wins. Every element immerses players in the adventurous world of gold mining and Western legends.",
     images: [
       goldMines1,
       goldMines2,
@@ -222,26 +222,26 @@ export const CASES: ICase[] = [
   },
   {
     id: "7",
-    name: "NV Casino",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "NV Casino - Landings & Visuals Production",
+    text: "For NV Casino, we created a full digital journey: a modern website, conversion-focused landing pages, and interactive designs with smooth animations. Using AI, we developed unique characters and visuals. Bold promotional banners complete a vibrant digital ecosystem boosting NV Casino’s online presence.",
     images: [nvcasino1, nvcasino2, nvcasino3, nvcasino4, nvcasino5],
   },
   {
     id: "8",
-    name: "Playfina",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "Playfina – Website Development, UI Enhancement & AI-Driven Graphics",
+    text: "For Playfina, we delivered a full website package—design and development of core elements. We created custom graphics and animated the hero slider for impact, improved UI with polished modals and interactions, and crafted AI-generated icons and slot previews, building a modern, cohesive platform.",
     images: [playfina1, playfina2, playfina3, playfina4],
   },
   {
     id: "9",
-    name: "R2D",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "R2D – Web, Mobile & Creative Graphics Development",
+    text: "We delivered a full digital package for R2D, designing and developing the main website and optimized mobile version. We created playful branded stickers, a high-impact landing page, and custom UI elements. The project blends bold visuals with smooth functionality, boosting R2D’s presence in the digital space.",
     images: [r2d1, r2d2, r2d3, r2d4],
   },
   {
     id: "10",
-    name: "Slotomen",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
+    name: "Slotomen – Gamification, Bonus Games & Visual Assets",
+    text: "We developed engaging gamification features and visuals, including a fully animated fortune wheel and bonus games to boost retention. Unique characters, in-game icons, progression levels, achievements, and branded stickers create a vibrant, immersive experience with dynamic visuals and interactive mechanics.",
     images: [
       slotomen1,
       slotomen2,
@@ -252,21 +252,21 @@ export const CASES: ICase[] = [
       slotomen7,
     ],
   },
-  {
-    id: "11",
-    name: "SpinLine",
-    text: "For OkFun, we delivered a full-scale branding package from scratch, crafting a playful and energetic brand identity. Our team developed a unique leopard mascot with multiple outfits, moods, and accessories, bringing versatility and life to the character. We also designed a wide range of merchandise including mugs, bottles, caps, t-shirts, and badges, all reflecting the vibrant spirit of the brand. Additionally, we created an extensive set of sports-themed banners for digital campaigns. To enhance the casino side of the brand, we designed AI-generated human mascots — a man and a woman — tailored specifically for gambling and betting audiences. This project blended creativity, AI technology, and marketing needs into a cohesive, eye-catching universe for OkFun.",
-    images: [
-      spinline1,
-      spinline2,
-      spinline3,
-      spinline4,
-      spinline5,
-      spinline6,
-      spinline7,
-      spinline8,
-    ],
-  },
+  // {
+  //   id: "11",
+  //   name: "Spinline – Mascot Creation & Promotional Assets",
+  //   text: "We developed an iconic superhero squirrel mascot with AI-generated visuals in various poses and outfits. This versatile character drives Spinline’s storytelling across banners, website, bonuses, and promos. We also created quest mechanics using the mascot, crafting a fun, dynamic, and memorable brand identity.",
+  //   images: [
+  //     spinline1,
+  //     spinline2,
+  //     spinline3,
+  //     spinline4,
+  //     spinline5,
+  //     spinline6,
+  //     spinline7,
+  //     spinline8,
+  //   ],
+  // },
 ];
 export const TESTIMONIALS: IItem[] = [
   {
@@ -299,7 +299,7 @@ export const TESTIMONIALS: IItem[] = [
   },
   {
     id: "5",
-    url: "https://clutch.co/profile/clickable-agency?page=1#reviews",
+    url: "https://clutch.co/profile/clickable-agency?page=1#review-9883",
     name: "Mike Toth",
     company: "Head of Marketing, YYY Partners",
     text: "Clickable Agency delivered what was needed ahead of schedule — it took them only five days. They ensured a smooth process through a dedicated project manager, who made sure each task was submitted on time and everyone was always on the same page. They were also creative, professional, and reliable.",

@@ -1,8 +1,8 @@
 import React from "react";
 // Components
-import ButtonCmp from "../button/Button";
 import NavPanel from "../navPanel/NavPanel";
 import AnimatedHamburgerButton from "../burgerMenu/BurgerMenu";
+import Form from "../form/Form";
 // import DropDownCmp from "../dropDown/DropDownCmp";
 // Local
 import Logo from "../../../public/icons/logo.svg";
@@ -20,10 +20,11 @@ export default function HeaderCmp() {
       <div className="flex  lg:hidden">
         <AnimatedHamburgerButton />
       </div>
-      <div className="hidden lg:flex align-middle gap-2">
-        {/* <DropDownCmp /> */}
-        <ButtonCmp text={"Let’s Talk"} bgColor="red" />
-      </div>
+      {/* <div className="hidden lg:flex align-middle gap-2"> */}
+      {/* <DropDownCmp /> */}
+      {/* <ButtonCmp text={"Let’s Talk"} bgColor="red" /> */}
+      {/* </div> */}
+      <Form variant="header" />
     </header>
   );
 }

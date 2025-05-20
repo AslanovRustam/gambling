@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -12,7 +12,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import avatar from "../../../public/avatar.png";
+// import avatar from "../../../public/avatar.png";
 import s from "./testimonials.module.css";
 
 function Slider() {
@@ -26,7 +26,7 @@ function Slider() {
       {TESTIMONIALS.map(({ id, url, name, company, text }) => (
         <SwiperSlide className={s.sliderItem} key={id}>
           <div className={s.head}>
-            <Image src={avatar} alt="Clutch logo" className={s.avatar} />
+            {/* <Image src={avatar} alt="Clutch logo" className={s.avatar} /> */}
             <div className={s.headInfo}>
               <p className={s.name}>{company}</p>
               <p className={s.link}>{name}</p>

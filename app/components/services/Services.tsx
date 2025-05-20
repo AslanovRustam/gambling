@@ -1,8 +1,8 @@
 import React from "react";
 // Componetns
 import Title from "../title/Title";
-import ButtonCmp from "../button/Button";
 import List from "../list/List";
+import Form from "../form/Form";
 // Utils
 import { NAVIGATION_MENU, SERVICES } from "@/app/utils/constants";
 // Local
@@ -16,7 +16,8 @@ function Services() {
       <div className="mb-10 w-full flex justify-center">
         <List items={SERVICES} styles="w-[345px]" />
       </div>
-      <ButtonCmp text={"Book a call"} bgColor="red" />
+      {/* <ButtonCmp text={"Book a call"} bgColor="red" /> */}
+      <Form variant="service" />
     </div>
   );
 }
