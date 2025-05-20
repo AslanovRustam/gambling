@@ -1,6 +1,6 @@
 "use client";
-import ButtonCmp from "../button/Button";
-import s from "./form.module.css";
+import { ChangeEvent, useState } from "react";
+import clsx from "clsx";
 import {
   Modal,
   ModalContent,
@@ -11,14 +11,85 @@ import {
   Input,
   Textarea,
 } from "@heroui/react";
+import ButtonCmp from "../button/Button";
+import CloseIcon from "../../../public/icons/close.svg";
+import s from "./form.module.css";
 
 type Props = {
   variant: string;
   parrentClose?: () => void;
 };
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 function Form({ variant, parrentClose }: Props) {
   const { isOpen, onOpenChange } = useDisclosure();
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [isRequestSent, setSsRequestSent] = useState(false);
+
+  const validate = (): boolean => {
+    const newErrors: Partial<FormData> = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Invalid email";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: undefined }));
+  };
+
+  const handleSubmit = async () => {
+    if (!validate()) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (!res.ok) return;
+
+      setSsRequestSent(true);
+
+      setTimeout(() => {
+        onOpenChange();
+        parrentClose?.();
+      }, 2000);
+
+      setFormData({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("Ошибка при отправке формы:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const renderButton =
     variant === "header" ? (
@@ -57,54 +128,93 @@ function Form({ variant, parrentClose }: Props) {
       {renderButton}
       <Modal
         isOpen={isOpen}
-        placement="top-center"
+        placement="center"
         onOpenChange={onOpenChange}
         backdrop="blur"
         key={11}
+        hideCloseButton
       >
-        <ModalContent>
+        <ModalContent className="relative">
           {(onClose) => (
             <>
-              <ModalHeader className={s.header}>Send Request</ModalHeader>
-              <ModalBody className="flex flex-col gap-4">
-                <Input
-                  label="Name"
-                  placeholder="Enter your Name"
-                  type="text"
-                  variant="bordered"
-                  labelPlacement="outside"
-                  className={s.input}
-                  classNames={{
-                    label: "text-[#A1A1AA] font-involve text-[12px]",
-                  }}
-                />
-                <Input
-                  label="Email"
-                  placeholder="Enter your email"
-                  variant="bordered"
-                  labelPlacement="outside"
-                />
-                <Textarea
-                  label="Your wishes"
-                  placeholder="text your wish here..."
-                  type="text"
-                  variant="bordered"
-                  labelPlacement="outside"
-                  minRows={3}
-                />
-              </ModalBody>
-              <ModalFooter>
-                <ButtonCmp
-                  text="Submit your application"
-                  bgColor="red"
-                  styles="mr-auto ml-auto"
-                  onClick={() => {
-                    onClose();
-                    if (!parrentClose) return;
-                    parrentClose();
-                  }}
-                />
-              </ModalFooter>
+              {isRequestSent ? (
+                <p className={s.reauestSent}>
+                  Your request has been successfully submitted
+                </p>
+              ) : (
+                <>
+                  <CloseIcon className={s.closeIcon} onClick={onClose} />
+                  <ModalHeader className={s.header}>Send Request</ModalHeader>
+                  <ModalBody className="flex flex-col gap-4">
+                    <Input
+                      name="name"
+                      label="Name"
+                      placeholder="Enter your Name"
+                      type="text"
+                      variant="bordered"
+                      labelPlacement="outside"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      isInvalid={!!errors.name}
+                      errorMessage={errors.name}
+                      className={s.input}
+                      classNames={{
+                        label: clsx(
+                          !!errors.name ? s.labelError : s.labelNormal
+                        ),
+                        inputWrapper: !!errors.name
+                          ? s.inputError
+                          : s.inputNormal,
+                        errorMessage: !!errors.name && s.labelError,
+                      }}
+                    />
+                    <Input
+                      name="email"
+                      label="Email"
+                      placeholder="Enter your email"
+                      variant="bordered"
+                      labelPlacement="outside"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      isInvalid={!!errors.email}
+                      errorMessage={errors.email}
+                      className={s.input}
+                      classNames={{
+                        label: clsx(
+                          !!errors.email ? s.labelError : s.labelNormal
+                        ),
+                        inputWrapper: !!errors.email
+                          ? s.inputError
+                          : s.inputNormal,
+                        errorMessage: !!errors.email && s.labelError,
+                      }}
+                    />
+                    <Textarea
+                      name="message"
+                      label="Your wishes"
+                      placeholder="text your wish here..."
+                      type="text"
+                      variant="bordered"
+                      labelPlacement="outside"
+                      minRows={3}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      classNames={{
+                        label: clsx(s.labelNormal),
+                      }}
+                    />
+                  </ModalBody>
+                  <ModalFooter>
+                    <ButtonCmp
+                      text={loading ? "Sending..." : "Submit your application"}
+                      bgColor="red"
+                      styles={clsx("mr-auto ml-auto", loading && "opacity-40")}
+                      onClick={handleSubmit}
+                      disabled={loading}
+                    />
+                  </ModalFooter>
+                </>
+              )}
             </>
           )}
         </ModalContent>

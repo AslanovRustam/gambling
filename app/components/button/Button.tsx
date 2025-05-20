@@ -8,6 +8,7 @@ type Props = {
   text: string;
   bgColor?: string;
   noAnimate?: boolean;
+  disabled?: boolean;
   variant?:
     | "solid"
     | "bordered"
@@ -36,6 +37,7 @@ function ButtonCmp({
   styles,
   color,
   noAnimate,
+  disabled,
 }: Props) {
   return (
     <>
@@ -51,6 +53,7 @@ function ButtonCmp({
           color={color}
           id="al"
           aria-label={text}
+          disabled={disabled}
         >
           {text}
         </Button>
@@ -67,6 +70,7 @@ function ButtonCmp({
           color={color}
           id="al"
           aria-label={text}
+          disabled={disabled}
         >
           {text}
         </Button>

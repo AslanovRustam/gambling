@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
-import Script from "next/script";
+// import Script from "next/script";
 
 import { Providers } from "./providers";
 
@@ -12,12 +12,16 @@ import Footer from "./components/footer/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: "Gambling - Clickable Agency",
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
+  openGraph: {
+    title: "Gambling - Clickable Agency",
+    url: "https://igaming.clickable.agency/",
+    siteName: "Clickable Agency",
+    locale: "en_US",
+    type: "website",
   },
 };
 
@@ -36,11 +40,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        <Script
+        {/* <Script
           id="hubspot-script"
           strategy="afterInteractive"
           src="https://js-eu1.hs-scripts.com/26544394.js?integration=WordPress"
-        />
+        /> */}
         <link
           rel="icon"
           href="/icon.png?<generated>"
