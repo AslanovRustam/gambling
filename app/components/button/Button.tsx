@@ -1,11 +1,11 @@
 import { Button } from "@heroui/button";
 import clsx from "clsx";
-import React from "react";
+import React, { ReactNode } from "react";
 // Animations
 // import Magnetic from "../magnetic/Magnetic";
 
 type Props = {
-  text: string;
+  text: string | ReactNode;
   bgColor?: string;
   noAnimate?: boolean;
   disabled?: boolean;
@@ -52,7 +52,7 @@ function ButtonCmp({
           onPress={onClick}
           color={color}
           id="al"
-          aria-label={text}
+          // aria-label={text}
           disabled={disabled}
         >
           {text}
@@ -69,7 +69,7 @@ function ButtonCmp({
           onPress={onClick}
           color={color}
           id="al"
-          aria-label={text}
+          // aria-label={text}
           disabled={disabled}
         >
           {text}

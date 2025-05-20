@@ -13,7 +13,9 @@ import {
 } from "@heroui/react";
 import ButtonCmp from "../button/Button";
 import CloseIcon from "../../../public/icons/close.svg";
+import coin from "../../../public/Coin.png";
 import s from "./form.module.css";
+import Image from "next/image";
 
 type Props = {
   variant: string;
@@ -78,17 +80,17 @@ function Form({ variant, parrentClose }: Props) {
 
       setSsRequestSent(true);
 
-      setTimeout(() => {
-        onOpenChange();
-        parrentClose?.();
-      }, 2000);
-
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
       console.error("Ошибка при отправке формы:", err);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleCloseModal = () => {
+    onOpenChange();
+    parrentClose?.();
   };
 
   const renderButton =
@@ -133,14 +135,30 @@ function Form({ variant, parrentClose }: Props) {
         backdrop="blur"
         key={11}
         hideCloseButton
+        className="max-w-[370px]"
       >
         <ModalContent className="relative">
           {(onClose) => (
             <>
               {isRequestSent ? (
-                <p className={s.reauestSent}>
-                  Your request has been successfully submitted
-                </p>
+                <div className={s.reauestSent}>
+                  <Image src={coin} alt="success coin" className={s.coin} />
+                  <div className={s.sucessContainer}>
+                    <p className={s.sucessTitle}>
+                      Your application is accepted
+                    </p>
+                    <p className={s.sucessText}>
+                      Our managers will contact you shortly
+                    </p>
+                  </div>
+                  <ButtonCmp
+                    text="OK"
+                    bgColor="red"
+                    styles="w-full"
+                    onClick={handleCloseModal}
+                    disabled={loading}
+                  />
+                </div>
               ) : (
                 <>
                   <CloseIcon className={s.closeIcon} onClick={onClose} />
@@ -206,7 +224,16 @@ function Form({ variant, parrentClose }: Props) {
                   </ModalBody>
                   <ModalFooter>
                     <ButtonCmp
-                      text={loading ? "Sending..." : "Submit your application"}
+                      text={
+                        loading ? (
+                          <span>
+                            Sending &nbsp;
+                            <span className={s.dots} />
+                          </span>
+                        ) : (
+                          "Submit your application"
+                        )
+                      }
                       bgColor="red"
                       styles={clsx("mr-auto ml-auto", loading && "opacity-40")}
                       onClick={handleSubmit}
