@@ -15,9 +15,9 @@ import okFun10 from "../../public/cases/okfun/10.png";
 import okFun11 from "../../public/cases/okfun/11.png";
 import okFun12 from "../../public/cases/okfun/12.png";
 import okFun13 from "../../public/cases/okfun/13.png";
-import bobr1 from "../../public/cases/bobr/1.png";
-import bobr2 from "../../public/cases/bobr/2.png";
-import bobr3 from "../../public/cases/bobr/3.png";
+// import bobr1 from "../../public/cases/bobr/1.png";
+// import bobr2 from "../../public/cases/bobr/2.png";
+// import bobr3 from "../../public/cases/bobr/3.png";
 import cashimo1 from "../../public/cases/cashimo/1.png";
 import cashimo2 from "../../public/cases/cashimo/2.png";
 import cashimo3 from "../../public/cases/cashimo/3.png";
@@ -61,14 +61,14 @@ import slotomen4 from "../../public/cases/slotomen/4.png";
 import slotomen5 from "../../public/cases/slotomen/5.png";
 import slotomen6 from "../../public/cases/slotomen/6.png";
 import slotomen7 from "../../public/cases/slotomen/7.png";
-import spinline1 from "../../public/cases/spinline/1.png";
-import spinline2 from "../../public/cases/spinline/2.png";
-import spinline3 from "../../public/cases/spinline/3.png";
-import spinline4 from "../../public/cases/spinline/4.png";
-import spinline5 from "../../public/cases/spinline/5.png";
-import spinline6 from "../../public/cases/spinline/6.png";
-import spinline7 from "../../public/cases/spinline/7.png";
-import spinline8 from "../../public/cases/spinline/8.png";
+// import spinline1 from "../../public/cases/spinline/1.png";
+// import spinline2 from "../../public/cases/spinline/2.png";
+// import spinline3 from "../../public/cases/spinline/3.png";
+// import spinline4 from "../../public/cases/spinline/4.png";
+// import spinline5 from "../../public/cases/spinline/5.png";
+// import spinline6 from "../../public/cases/spinline/6.png";
+// import spinline7 from "../../public/cases/spinline/7.png";
+// import spinline8 from "../../public/cases/spinline/8.png";
 
 export const ICONS = {
   casinochan: lazy(

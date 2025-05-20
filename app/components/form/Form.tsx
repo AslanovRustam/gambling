@@ -99,7 +99,7 @@ function Form({ variant, parrentClose }: Props) {
                   bgColor="red"
                   styles="mr-auto ml-auto"
                   onClick={() => {
-                    onOpenChange();
+                    onClose();
                     if (!parrentClose) return;
                     parrentClose();
                   }}

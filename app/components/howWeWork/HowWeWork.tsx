@@ -1,4 +1,3 @@
-import ButtonCmp from "../button/Button";
 import Title from "../title/Title";
 // Animations
 import { MaskText } from "../maskText/MaskText";
@@ -31,7 +30,6 @@ function HowWeWork() {
         </ul>
       </div>
       <Form variant="howWeWork" />
-      {/* <ButtonCmp text="Let's Talk" bgColor="red" /> */}
     </section>
   );
 }
