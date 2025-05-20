@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1620px;
+  margin: 0 auto;
 }
 .subTitle {
   color: var(--colors-common-white);

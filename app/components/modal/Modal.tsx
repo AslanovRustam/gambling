@@ -26,7 +26,7 @@ function ModalCmp({ isOpen, onOpenChange, currentCase }: Props) {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setModalSize(window.innerWidth < 1024 ? "sm" : "3xl");
+      setModalSize(window.innerWidth < 1025 ? "sm" : "3xl");
     };
 
     checkScreenSize();

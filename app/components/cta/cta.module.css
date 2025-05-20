@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 50px 7.8em;
+  /* margin: 50px 7.8em; */
   padding: 80px;
   background-color: var(--colors-layout-overlay);
   border-radius: 24px;
@@ -11,6 +11,10 @@
   background-position: 113% 46%;
   background-size: 60% auto;
   overflow: hidden;
+  max-width: 1620px;
+  width: 1620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .section::before {
   content: "";
@@ -39,6 +43,13 @@
   font-size: 20px;
   line-height: 28px;
   opacity: 0.4;
+}
+@media (max-width: 1560px) {
+  .section {
+    max-width: unset;
+    width: auto;
+    margin: 50px 7.8em;
+  }
 }
 @media (max-width: 768px) {
   .section {

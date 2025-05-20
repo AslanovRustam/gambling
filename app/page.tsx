@@ -10,7 +10,9 @@ import Cta from "./components/cta/Cta";
 export default function Home() {
   return (
     <section className="flex flex-col ">
+      {/* <div className="relative flex flex-col lg:flex-row"> */}
       <Hero />
+      {/* </div> */}
       <Partners />
       <Services />
       <WhyUs />

@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  max-width: 1620px;
+  width: 1620px;
+  margin-left: auto;
+  margin-right: auto;
   /* background-image: url("/hero.png");
   background-repeat: no-repeat;
   background-position: center right;
@@ -19,7 +23,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 910px;
+  width: 1020px;
 }
 
 .subTitle {
@@ -29,6 +33,10 @@
   opacity: 0.4;
 }
 @media (max-width: 1440px) {
+  .section {
+    max-width: 1320px;
+    width: 1320px;
+  }
   .image {
     width: 710px;
   }
@@ -36,9 +44,11 @@
 @media (max-width: 1280px) {
   .section {
     flex-direction: column;
+    width: auto;
+    max-width: none;
   }
   .image {
-    /* width: 100vw; */
+    position: relative;
   }
 }
 @media (max-width: 1024px) {

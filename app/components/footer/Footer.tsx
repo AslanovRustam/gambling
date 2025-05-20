@@ -10,7 +10,7 @@ function Footer() {
         <Logo className="w-32 sm:w-48" />
       </a>
       <div className={s.footerLinks}>
-        <div className="flex flex-col justify-between gap-5 lg:gap-20 sm:flex-row">
+        <div className="flex flex-col justify-between gap-2 sm:flex-wrap lg:gap-8 lg:flex-row 2xl:gap-20">
           <div className={s.adress}>
             <p className={s.title}>Address:</p>
             <p className={s.description}>
@@ -24,6 +24,12 @@ function Footer() {
                 office@clickable.agency
               </a>
             </p>
+          </div>
+          <div className={s.phone}>
+            <p className={s.title}>
+              <a href="tel:+380639993777">+38 063 999 37 77</a>
+            </p>
+            <p className={s.description}>Telegram, Whatsapp, Viber</p>
           </div>
         </div>
         <div className={s.links}>

@@ -87,173 +87,131 @@ function WhyUs() {
       onMouseLeave={resetTransform}
       ref={parallaxRef}
     >
-      <div className={s.containerLeft}>
-        <div className={s.wrapper}>
-          <div className={s.left}></div>
-          <div className={s.right}>
-            <Title text="Why Us" />
-            <p className={s.subTitle}>We’re built for gambling projects</p>
-          </div>
-        </div>
-        <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon1} alt="01" />
-            </div>
-            <div className={s.number}>
-              <MaskText text="01" stagger={1} />
+      <div className={s.container}>
+        <div className={s.containerLeft}>
+          <div className={s.wrapper}>
+            <div className={s.left}></div>
+            <div className={s.right}>
+              <Title text="Why Us" />
+              <p className={s.subTitle}>We’re built for gambling projects</p>
             </div>
           </div>
-          <div className={s.right}>
-            <div className={s.name}>
-              <MaskText text="10+ years in iGaming" stagger={2} />
+          <div className={s.wrapper}>
+            <div className={s.left}>
+              <div className={s.square}>
+                <Image src={icon1} alt="01" />
+              </div>
+              <div className={s.number}>
+                <MaskText text="01" stagger={1} />
+              </div>
             </div>
-            <div className={s.description}>
-              <MaskText
-                text="We know the challenges. We speak your language."
-                stagger={3}
-              />
-            </div>
-          </div>
-        </div>
-        <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon2} alt="02" />
-            </div>
-            <div className={s.number}>
-              <MaskText text="02" stagger={1} />
-            </div>
-          </div>
-          <div className={s.right}>
-            <div className={s.name}>
-              <MaskText text="Scalable teams" stagger={2} />
-            </div>
-            <div className={s.description}>
-              <MaskText
-                text="Trained specifically for your project."
-                stagger={3}
-              />
+            <div className={s.right}>
+              <div className={s.name}>
+                <MaskText text="10+ years in iGaming" stagger={2} />
+              </div>
+              <div className={s.description}>
+                <MaskText
+                  text="We know the challenges. We speak your language."
+                  stagger={3}
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon3} alt="03" />
+          <div className={s.wrapper}>
+            <div className={s.left}>
+              <div className={s.square}>
+                <Image src={icon2} alt="02" />
+              </div>
+              <div className={s.number}>
+                <MaskText text="02" stagger={1} />
+              </div>
             </div>
-            <div className={s.number}>
-              <MaskText text="03" stagger={1} />
+            <div className={s.right}>
+              <div className={s.name}>
+                <MaskText text="Scalable teams" stagger={2} />
+              </div>
+              <div className={s.description}>
+                <MaskText
+                  text="Trained specifically for your project."
+                  stagger={3}
+                />
+              </div>
             </div>
           </div>
-          <div className={s.right}>
-            <div className={s.name}>
-              <MaskText text="You can rely on us" stagger={2} />
+          <div className={s.wrapper}>
+            <div className={s.left}>
+              <div className={s.square}>
+                <Image src={icon3} alt="03" />
+              </div>
+              <div className={s.number}>
+                <MaskText text="03" stagger={1} />
+              </div>
             </div>
-            <div className={s.description}>
-              <MaskText
-                text="We handle the boring stuff — from voiceover orders to licensing
+            <div className={s.right}>
+              <div className={s.name}>
+                <MaskText text="You can rely on us" stagger={2} />
+              </div>
+              <div className={s.description}>
+                <MaskText
+                  text="We handle the boring stuff — from voiceover orders to licensing
               stock content."
-                stagger={3}
-              />
+                  stagger={3}
+                />
+              </div>
+            </div>
+          </div>
+          <div className={s.wrapper}>
+            <div className={s.left}>
+              <div className={s.square}>
+                <Image src={icon4} alt="04" />
+              </div>
+              <div className={s.number}>
+                <MaskText text="04" stagger={1} />
+              </div>
+            </div>
+            <div className={s.right}>
+              <div className={s.name}>
+                <MaskText text="Our clients" stagger={2} />
+              </div>
+              <div className={s.description}>
+                <MaskText
+                  text="They stick with us. And we help them grow & win"
+                  stagger={3}
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon4} alt="04" />
-            </div>
-            <div className={s.number}>
-              <MaskText text="04" stagger={1} />
-            </div>
+        <div
+          className={clsx(
+            s.containerRight,
+            "w-[400px] h-[270px] sm:h-auto lg:w-[800px]  lg:h-[540px] flex items-center justify-center"
+          )}
+        >
+          <div className={s.parallaxInner}>
+            <Image
+              src={logo}
+              alt="Clickable logo"
+              className="h-full w-auto z-10 relative"
+            />
           </div>
-          <div className={s.right}>
-            <div className={s.name}>
-              <MaskText text="Our clients" stagger={2} />
-            </div>
-            <div className={s.description}>
-              <MaskText
-                text="They stick with us. And we help them grow & win"
-                stagger={3}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className={clsx(
-          s.containerRight,
-          "w-[400px] h-[270px] sm:h-auto lg:w-[800px]  lg:h-[540px] flex items-center justify-center"
-        )}
-      >
-        <div className={s.parallaxInner}>
           <Image
-            src={logo}
-            alt="Clickable logo"
-            className="h-full w-auto z-10 relative"
+            src={heart}
+            alt="card heart"
+            className={s.heart}
+            ref={heartRef}
           />
+          <Image
+            src={diomond}
+            alt="card diomond"
+            className={s.diomond}
+            ref={diomondRef}
+          />
+          <Image src={pike} alt="card pike" className={s.pike} ref={pikeRef} />
         </div>
-        <Image
-          src={heart}
-          alt="card heart"
-          className={s.heart}
-          ref={heartRef}
-        />
-        <Image
-          src={diomond}
-          alt="card diomond"
-          className={s.diomond}
-          ref={diomondRef}
-        />
-        <Image src={pike} alt="card pike" className={s.pike} ref={pikeRef} />
       </div>
     </section>
   );
 }
 
 export default WhyUs;
-
-/* <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon2} alt="02" />
-            </div>
-            <p className={s.number}>02</p>
-          </div>
-          <div className={s.right}>
-            <p className={s.name}>Scalable teams</p>
-            <p className={s.description}>
-              Trained specifically for your project.
-            </p>
-          </div>
-        </div>
-        <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon3} alt="03" />
-            </div>
-            <p className={s.number}>03</p>
-          </div>
-          <div className={s.right}>
-            <p className={s.name}>You can rely on us</p>
-            <p className={s.description}>
-              We handle the boring stuff — from voiceover orders to licensing
-              stock content.
-            </p>
-          </div>
-        </div>
-        <div className={s.wrapper}>
-          <div className={s.left}>
-            <div className={s.square}>
-              <Image src={icon4} alt="04" />
-            </div>
-            <p className={s.number}>04</p>
-          </div>
-          <div className={s.right}>
-            <p className={s.name}>Our clients</p>
-            <p className={s.description}>
-              They stick with us. And we help them grow & win
-            </p>
-          </div>
-        </div> */

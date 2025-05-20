@@ -32,7 +32,7 @@ function AnimatedText({ text, tag, сlassName }: Props) {
           variants={chartVariants}
           className="inline-block"
         >
-          {item}
+          {item === " " ? "\u00A0" : item}
         </motion.span>
       ))}
     </MotionTag>
