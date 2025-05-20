@@ -12,5 +12,6 @@
 @media (max-width: 640px) {
   .title {
     font-size: 36px;
+    line-height: 36px;
   }
 }

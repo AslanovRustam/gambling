@@ -20,7 +20,7 @@ export default function Hero() {
           <AnimatedText
             text="Full-cycle production for marketing assets, UI/UX, games & brand identity — built by a team with 10+ years in iGaming."
             tag="p"
-            сlassName="text-white text-[20px] leading-7 opacity-40 sm:max-w-[380px] lg:max-w-[500px]"
+            сlassName="text-white text-[20px] leading-7 opacity-40 sm:max-w-[380px] lg:max-w-[500px] text-balance"
           />
 
           {/* <div className="w-fit">
