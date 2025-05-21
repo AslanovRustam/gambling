@@ -15,7 +15,7 @@ export default function Hero() {
     <>
       <section className={s.section} id={NAVIGATION_MENU[0].id}>
         <div className={s.container}>
-          <TitleByWord text="Design & Creative Powerhouse for the Gambling Industry" />
+          <TitleByWord text="Design & Creative Powerhouse for the iGaming Industry" />
 
           <AnimatedText
             text="Full-cycle production for marketing assets, UI/UX, games & brand identity — built by a team with 10+ years in iGaming."
