@@ -192,7 +192,7 @@ function WhyUs() {
             <Image
               src={logo}
               alt="Clickable logo"
-              className="h-full w-auto z-10 relative"
+              className="h-auto w-full z-10 relative"
             />
           </div>
           <Image

@@ -12,12 +12,12 @@ import Footer from "./components/footer/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Gambling - Clickable Agency",
+    default: "iGaming  - Clickable Agency",
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
   openGraph: {
-    title: "Gambling - Clickable Agency",
+    title: "iGaming - Clickable Agency",
     url: "https://igaming.clickable.agency/",
     siteName: "Clickable Agency",
     locale: "en_US",
